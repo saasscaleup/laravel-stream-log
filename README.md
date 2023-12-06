@@ -30,6 +30,7 @@
 
 - **Easily stream your Backend log.** 
 - **Easily stream your Storage/Logs/Laravel log.** 
+
 <br>
 
 ![banner](https://github.com/saasscaleup/laravel-stream-log/blob/master/lsl-demo.gif?raw=true)
