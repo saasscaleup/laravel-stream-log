@@ -43,10 +43,10 @@
 
 ## Installation
 
-Via Composer
+Via Composer - Not recommended for production environment
 
 ``` bash
-$ composer require saasscaleup/laravel-stream-log
+$ composer require --dev saasscaleup/laravel-stream-log
 ```
 
 For Laravel < 5.5:

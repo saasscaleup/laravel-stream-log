@@ -1,4 +1,4 @@
-@if(config('lsl.enabled'))
+@if(config('lsl.enabled') && config('app.env')!=='production'))
 
     
       <!--  EventSource pollyfill  -->
