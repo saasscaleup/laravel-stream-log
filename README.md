@@ -44,6 +44,8 @@
 
 ## Installation
 
+### Install composer package (dev)
+
 #### For Laravel >= 5.5
 Via Composer - Not recommended for production environment
 
@@ -51,7 +53,7 @@ Via Composer - Not recommended for production environment
 $ composer require --dev saasscaleup/laravel-stream-log
 ```
 
-For Laravel < 5.5:
+#### For Laravel < 5.5
 
 Add Service Provider to `config/app.php` in `providers` section
 ```php
@@ -66,17 +68,23 @@ Add Facade to `config/app.php` in `aliases` section
 
 ---
 
+### Publish package's config, migration and view files
+
+
 Publish package's config, migration and view files by running below command:
 
 ```bash
 $ php artisan vendor:publish --provider="Saasscaleup\LSL\LSLServiceProvider"
 ```
 
+### Run migration command
+
 Run `php artisan migrate` to create `stream_logs` table.
 
-## Setup LSL
 
-Aadd this in your view/layout (usually `layout/app.blade.php`) file:
+## Setup Laravel Stream Log -> LSL 
+
+Aadd this in your main view/layout (usually `layout/app.blade.php`) file:
 
 ```php
 @include('lsl::view')
@@ -226,7 +234,7 @@ Please see the [MIT](license.md) for more information.
   
  If you Like the tutorial and you want to support my channel so I will keep releasing amzing content that will turn you to a desirable Developer with Amazing Cloud skills... I will realy appricite if you:
  
- 1. Subscribe to out [youtube](http://www.youtube.com/@ScaleUpSaaS?sub_confirmation=1)
+ 1. Subscribe to our [youtube](http://www.youtube.com/@ScaleUpSaaS?sub_confirmation=1)
  2. Buy me A [coffee ❤️](https://www.buymeacoffee.com/scaleupsaas)
 
 Thanks for your support :)
