@@ -1,0 +1,53 @@
+{
+    "name": "saasscaleup/laravel-stream-log",
+    "description": "Easily stream your Laravel application logs to the frontend in real-time using server-sent event (SSE)",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Scale-Up SaaS",
+            "email": "saasscaleup@gmail.com"
+        }
+    ],
+    "homepage": "https://github.com/saasscaleup/laravel-stream-log",
+    "keywords": [
+        "Laravel",
+        "SSE",
+        "Sever Sent Events",
+        "SeverEvents",
+        "Server",
+        "Event",
+        "Realtime",
+        "Polling",
+        "Notifications",
+        "Stream Log",
+        "Log",
+        "Laravel Log"
+    ],
+    "require": {
+        "php": "^7.0|^8.0",
+        "illuminate/support": "~5|~6|~7|~8|~9|~10"
+    },
+    "autoload": {
+        "psr-4": {
+            "Saasscaleup\\LSL\\": "src/"
+        },
+        "files": [
+            "src/Helpers/helper.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Saasscaleup\\LSL\\LSLServiceProvider"
+            ],
+            "aliases": {
+                "LSL": "Saasscaleup\\LSL\\Facades\\LSLFacade"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable"
+}
