@@ -5,7 +5,6 @@ namespace Saasscaleup\LSL;
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Log\Events\MessageLogged;
-use Saasscaleup\LSL\Facades\LSLFacade;
 
 class LSLServiceProvider extends BaseServiceProvider
 {
@@ -52,10 +51,10 @@ class LSLServiceProvider extends BaseServiceProvider
 
                     if (config('lsl.log_specific')!==''){
                         if (str_contains($e->message,config('lsl.log_specific')) ){
-                            LSLFacade::notify($e->message,$e->level,'stream');
+                            stream_log($e->message,$e->level,'stream');
                         }
                     }else{
-                        LSLFacade::notify($e->message,$e->level,'stream');
+                        stream_log($e->message,$e->level,'stream');
                     }
                 }
             }); 

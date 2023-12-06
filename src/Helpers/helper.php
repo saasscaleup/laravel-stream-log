@@ -1,13 +1,13 @@
 <?php
 
-if (!function_exists('streamLogNotify')) {
+if (!function_exists('stream_log')) {
     /**
      * @param $message
      * @param string $type : alert, success, error, warning, info
      * @param string $event : Type of event such as "UserLogout", "EmailSent", etc
      * @return mixed
      */
-    function streamLogNotify($message, $type = 'info', $event = 'stream')
+    function stream_log($message, $type = 'info', $event = 'stream')
     {
         return app('LSL')->notify($message, $type, $event);
     }
