@@ -22,7 +22,9 @@
         "Notifications",
         "Stream Log",
         "Log",
-        "Laravel Log"
+        "Laravel Log",
+        "Debug",
+        "Laravel Debug"
     ],
     "require": {
         "php": "^7.0|^8.0",

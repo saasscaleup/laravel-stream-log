@@ -28,8 +28,8 @@
 
 ## ✨ Features
 
-- **Easily stream your Backend events.** 
-- **Easily stream your Storage/Logs/Laravel log.** 
+- **Easily stream your Backend events from your Controllers \ Events \ Models \ Etc... .** 
+- **Easily stream your Logs (`storage/logs/laravel.log`).** 
 
 <br>
 

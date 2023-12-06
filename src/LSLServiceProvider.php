@@ -49,12 +49,13 @@ class LSLServiceProvider extends BaseServiceProvider
                 // If log type in array
                 if (in_array($e->level,explode(',',config('lsl.log_type')))){
 
+                    $message = $e->message.' : '.json_encode($e->context);
                     if (config('lsl.log_specific')!==''){
-                        if (str_contains($e->message,config('lsl.log_specific')) ){
-                            stream_log($e->message,$e->level,'stream');
+                        if (str_contains($message,config('lsl.log_specific')) ){
+                            stream_log($message,$e->level,'stream');
                         }
                     }else{
-                        stream_log($e->message,$e->level,'stream');
+                        stream_log($message,$e->level,'stream');
                     }
                 }
             }); 
