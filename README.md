@@ -1,43 +1,39 @@
-<br />
-<br />
-<p align="center">
-  <!-- XMAS: https://user-images.githubusercontent.com/7728097/146406114-a5f5e13a-e2ee-47a2-9bf9-ad43cdbdf200.png-->
-![alt text](https://github.com/saasscaleup/laravel-stream-log/blob/master/lsl-saasscaleup.png?raw=true)
-</p>
-<br />
-
+![Main Window two](https://github.com/saasscaleup/laravel-stream-log/blob/master/lsl-saasscaleup.png?raw=true)
 
 <h3 align="center">Easily stream your Laravel application logs to the frontend in real-time using server-sent event (SSE)</h3>
 
 <h4 align="center">
-  <a href="https://youtube.com/@ScaleUpSaaS">Youtube Channel 🎥</a>
+  <a href="https://youtube.com/@ScaleUpSaaS">Youtube</a>
   <span> · </span>
   <a href="https://twitter.com/ScaleUpSaaS">Twitter</a>
-
+  <span> · </span>
+  <a href="https://facebook.com/ScaleUpSaaS">Facebook</a>
+  <span> · </span>
+  <a href="https://buymeacoffee.com/scaleupsaas">By Me a Coffee</a>
 </h4>
 
 <p align="center">
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Total Downloads][ico-downloads]][link-downloads]
+   <a href="https://packagist.org/packages/saasscaleup/laravel-stream-log">
+      <img src="https://poser.pugx.org/saasscaleup/laravel-stream-log/v/stable.png" alt="Latest Stable Version">
+  </a>
+
+  <a href="https://packagist.org/packages/maatwebsite/excel">
+      <img src="https://poser.pugx.org/saasscaleup/laravel-stream-log/downloads.png" alt="Total Downloads">
+  </a>
+
+  <a href="https://packagist.org/packages/maatwebsite/excel">
+    <img src="https://poser.pugx.org/saasscaleup/laravel-stream-log/license.png" alt="License">
+  </a>
 </p>
 
 ## ✨ Features
 
-- **Easily export collections to Excel.** Supercharge your Laravel collections and export them directly to an Excel or CSV document. Exporting has never been so easy.
-
-- **Supercharged exports.** Export queries with automatic chunking for better performance. You provide us the query, we handle the performance. Exporting even larger datasets? No worries, Laravel Excel has your back. You can queue your exports so all of this happens in the background.
-
-- **Supercharged imports.** Import workbooks and worksheets to Eloquent models with chunk reading and batch inserts! Have large files? You can queue every chunk of a file! Your entire import will happen in the background.
-
-- **Export Blade views.** Want to have a custom layout in your spreadsheet? Use a HTML table in a Blade view and export that to Excel.
-
-![banner]()
+- **Easily stream your Backend log.** 
+- **Easily stream your Storage/Logs/Laravel log.** 
 <br>
-# laravel-stream-log => LSL
-Easily stream your Laravel application logs to the frontend in real-time using server-sent event (SSE). Stay on top of your application's activity, monitor errors, and debug efficiently without the need moving between screens or page refresh.
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
-[![Total Downloads][ico-downloads]][link-downloads]
+![banner](https://github.com/saasscaleup/laravel-stream-log/blob/master/lsl-demo.gif?raw=true)
+<br>
 
 
 ## Requirements
@@ -78,11 +74,15 @@ Run `php artisan migrate` to create `stream_logs` table.
 
 ## Setup LSL
 
-Setup config options in `config/lsl.php` file and then add this in your view/layout (usally `layout/app.blade.php`) file:
+Aadd this in your view/layout (usually `layout/app.blade.php`) file:
 
 ```php
 @include('lsl::view')
 ```
+
+## Configuration
+
+Configuration is done via environment variables or directly in the configuration file (`config/lsl.php`).
 
 ## Usage
 
@@ -116,16 +116,13 @@ public function myFunction()
     LSLFacade::notify('Invoke stream log via Facade 3');
     
     // or via helper
-    streamLogNotify('Invoke stream log via helper 1');
-    streamLogNotify('Invoke stream log via helper 2');     
-    streamLogNotify('Invoke stream log via helper 3');
+    stream_log('Invoke stream log via helper 1');
+    stream_log('Invoke stream log via helper 2');     
+    stream_log('Invoke stream log via helper 3');
 }
 ```
 
 
-## Configuration
-
-Configuration is done via environment variables or directly in the configuration file (`config/lsl.php`).
 
 ## Customizing Notification Library
 
@@ -143,14 +140,14 @@ LSLFacade::notify($message, $type = 'info', $event = 'message')
 Notice `$event = 'stream'`. You can customize this, let's say you want to use `UserPurchase` as SSE event type:
 
 ```php
-use Sarfraznawaz2005\SSE\Facades\SSEFacade;
+use Saasscaleup\LSL\Facades\LSLFacade;
 
 public function myMethod()
 {
     SSEFacade::notify('User purchase plan - step 1', 'info', 'UserPurchase');
     
     // or via helper
-    streamLogNotify('User purchase plan - step 1', 'info', 'UserPurchase');
+    stream_log('User purchase plan - step 1', 'info', 'UserPurchase');
 }
 ```
 
