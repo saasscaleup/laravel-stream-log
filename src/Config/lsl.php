@@ -9,7 +9,7 @@ return [
     'log_enabled' => env('LSL_LOG_ENABLED', true),
 
     // log listener  for specific log type
-    'log_type' => env('LSL_LOG_TYPE', 'info,error,warning,alert,critical,debug'), // Without space
+    'log_type' => env('LSL_LOG_TYPE', 'info,error,warning,alert,critical,debug,success'), // Without space
 
     // log listener for specific word inside log messages
     'log_specific' => env('LSL_LOG_SPECIFIC', ''), // 'test' or 'foo' or 'bar' or leave empty '' to anyable any word
@@ -35,9 +35,9 @@ return [
     'js_console_log_enabled' => env('LSL_JS_CONSOLE_LOG_ENABLED', true),
 
      // js notification toast library
-    'js_notification_library' => env('LSL_JS_NOTIFICATION_LIBRARY', 'noty'), // 'izitoast' or 'noty'
+    'js_notification_library' => env('LSL_JS_NOTIFICATION_LIBRARY', 'izitoast'), // 'izitoast' or 'noty'
 
     // notification settings
-    'js_position' => 'bottomRight', // topLeft, topCenter, topRight, center, bottomLeft, bottomCenter, bottomRight
-    'js_timeout' => 5000, // false, 1000, 3000, 3500, etc. Delay for closing event in milliseconds (ms). Set 'false' for sticky notifications.
+    'js_position' => 'bottomLeft', // topLeft, topCenter, topRight, center, bottomLeft, bottomCenter, bottomRight
+    'js_timeout' => 10000, // false, 1000, 3000, 3500, etc. Delay for closing event in milliseconds (ms). Set 'false' for sticky notifications.
 ];

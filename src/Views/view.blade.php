@@ -74,7 +74,7 @@
                         message:  data.message,
                         position: "{{config('lsl.js_position')}}",
                         timeout: js_timeout,
-                        maxWidth: 300,
+                        //maxWidth: 300,
                     });
 
                     if (js_console_log===true || js_console_log===1){
