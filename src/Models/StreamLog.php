@@ -59,7 +59,13 @@ class StreamLog extends Model
             return false;
         }
         
+        // Delete delivered messages
         self::query()->where('delivered', true)->delete();
+
+        // delete old not delivered messages
+        $date = new DateTime;
+        $date = $date->modify('-30 minutes');
+        self::query()->where('delivered', false)->where('created_at','<=',$date->format('Y-m-d H:i:s'))->delete();
         
         // set cache
         Cache::put('delete_stream_log',true,config('lsl.delete_log_interval'));

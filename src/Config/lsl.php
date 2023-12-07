@@ -26,8 +26,8 @@ return [
     // Frontend pull invoke interval
     'server_event_retry' => env('LSL_SERVER_EVENT_RETRY', '2000'),
 
-    // every 10 minutes cache expired, delete logs on next request
-    'delete_log_interval' => env('LSL_DELETE_LOG_INTERVAL', 600), 
+    // every 5 minutes cache expired, delete logs on next request
+    'delete_log_interval' => env('LSL_DELETE_LOG_INTERVAL', 300), 
 
     /******* Frontend *******/
 
