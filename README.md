@@ -2,7 +2,7 @@
 
 <h3 align="center">Easily stream your Laravel application logs to the frontend in real-time using server-sent event (SSE)</h3>
 
-<h4 align="center">
+<!--h4 align="center">
   <a href="https://youtube.com/@ScaleUpSaaS">Youtube</a>
   <span> · </span>
   <a href="https://twitter.com/ScaleUpSaaS">Twitter</a>
@@ -10,7 +10,7 @@
   <a href="https://facebook.com/ScaleUpSaaS">Facebook</a>
   <span> · </span>
   <a href="https://buymeacoffee.com/scaleupsaas">By Me a Coffee</a>
-</h4>
+</h4-->
 
 <p align="center">
    <a href="https://packagist.org/packages/saasscaleup/laravel-stream-log">
@@ -46,7 +46,6 @@
 
 ### Install composer package (dev)
 
-#### For Laravel >= 5.5
 Via Composer - Not recommended for production environment
 
 ``` bash
@@ -81,6 +80,9 @@ $ php artisan vendor:publish --provider="Saasscaleup\LSL\LSLServiceProvider"
 
 Run `php artisan migrate` to create `stream_logs` table.
 
+```bash
+$ php artisan migrate
+```
 
 ## Setup Laravel Stream Log -> LSL 
 
@@ -182,7 +184,16 @@ public function myFunction()
 
 ## Customizing Notification Library
 
-By default, package uses [noty](https://github.com/needim/noty) for showing notifications. You can customize this by modifying code in `resources/views/vendor/lsl/view.blade.php` file.
+By default, package uses [noty](https://github.com/needim/noty) for showing notifications. 
+
+You can switch to  [izitoast](https://izitoast.marcelodolza.com/) by updating config file `config/lsl.php`
+
+```
+ // js notification toast library
+'js_notification_library' => env('LSL_JS_NOTIFICATION_LIBRARY', 'izitoast'), // 'izitoast' or 'noty'
+```
+
+You can also, customize this by modifying code in `resources/views/vendor/lsl/view.blade.php` file.
 
 ## Customizing LSL Events
 
