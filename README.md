@@ -29,7 +29,8 @@
 ## ✨ Features
 
 - **Easily stream your Backend events from your Controllers \ Events \ Models \ Etc... .** 
-- **Easily stream your Logs (`storage/logs/laravel.log`).** 
+- **Easily stream your Logs (`storage/logs/laravel.log`).**
+- **Print Backend logs and events to Frontend browser `console.log(data)`** 
 
 <br>
 
