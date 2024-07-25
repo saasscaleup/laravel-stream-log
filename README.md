@@ -14,15 +14,15 @@
 
 <p align="center">
    <a href="https://packagist.org/packages/saasscaleup/laravel-stream-log">
-      <img src="https://poser.pugx.org/saasscaleup/laravel-stream-log/v/stable.png" alt="Latest Stable Version">
+      <img src="https://img.shields.io/packagist/v/saasscaleup/laravel-stream-log.svg?style=flat-square" alt="Latest Stable Version">
   </a>
 
   <a href="https://packagist.org/packages/saasscaleup/laravel-stream-log">
-      <img src="https://poser.pugx.org/saasscaleup/laravel-stream-log/downloads.png" alt="Total Downloads">
+      <img src="https://img.shields.io/packagist/dt/saasscaleup/laravel-stream-log.svg?style=flat-square" alt="Total Downloads">
   </a>
 
   <a href="https://packagist.org/packages/saasscaleup/laravel-stream-log">
-    <img src="https://poser.pugx.org/saasscaleup/laravel-stream-log/license.png" alt="License">
+    <img src="https://img.shields.io/packagist/l/saasscaleup/laravel-stream-log.svg?style=flat-square" alt="License">
   </a>
 </p>
 
