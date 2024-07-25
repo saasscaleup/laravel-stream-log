@@ -233,10 +233,6 @@ es.addEventListener("UserPurchase", function (e) {
 </script>
 ```
 
-## Inspired By
-
-[open-source](https://github.com/arfraznawaz2005/laravel-sse)
-
 ## License
 
 Please see the [MIT](license.md) for more information.
